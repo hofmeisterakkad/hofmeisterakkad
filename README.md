@@ -1,15 +1,9 @@
 <div align="center">
 
 <img
-  src="./assets/profile-header.svg?v=1"
+  src="./assets/profile-header.svg"
   width="100%"
   alt="Leon A. Hofmeister-Akkad"
-/>
-
-<img
-  src="./assets/sic-parvis-magna-glitch.svg?v=1"
-  width="460"
-  alt="Sic Parvis Magna"
 />
 
 <br>
