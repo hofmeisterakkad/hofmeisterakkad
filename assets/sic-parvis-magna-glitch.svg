@@ -13,11 +13,24 @@
 
   <defs>
     <filter id="glow" x="-20%" y="-80%" width="140%" height="260%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-color="#00d9ff" flood-opacity="0.35"/>
-      <feComposite in2="blur" operator="in"/>
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="3"
+        result="blur"
+      />
+      <feFlood
+        flood-color="#00d9ff"
+        flood-opacity="0.35"
+        result="color"
+      />
+      <feComposite
+        in="color"
+        in2="blur"
+        operator="in"
+        result="glow"
+      />
       <feMerge>
-        <feMergeNode/>
+        <feMergeNode in="glow"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
@@ -37,7 +50,11 @@
 
   <style>
     .wordmark {
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-family:
+        "JetBrains Mono",
+        "SFMono-Regular",
+        Consolas,
+        monospace;
       font-size: 42px;
       font-weight: 700;
       letter-spacing: 7px;
@@ -220,7 +237,7 @@
       }
 
       73% {
-        opacity: 0.9;
+        opacity: 0.90;
       }
 
       74% {
@@ -232,7 +249,7 @@
       }
 
       76% {
-        opacity: 0.5;
+        opacity: 0.50;
       }
     }
   </style>
@@ -249,7 +266,10 @@
     SIC PARVIS MAGNA
   </text>
 
-  <g class="glitch-slice" clip-path="url(#slice-top)">
+  <g
+    class="glitch-slice"
+    clip-path="url(#slice-top)"
+  >
     <g class="offset-a">
       <text class="wordmark main" x="360" y="40">
         SIC PARVIS MAGNA
@@ -257,7 +277,10 @@
     </g>
   </g>
 
-  <g class="glitch-slice" clip-path="url(#slice-middle)">
+  <g
+    class="glitch-slice"
+    clip-path="url(#slice-middle)"
+  >
     <g class="offset-b">
       <text class="wordmark main" x="360" y="40">
         SIC PARVIS MAGNA
@@ -265,7 +288,10 @@
     </g>
   </g>
 
-  <g class="glitch-slice" clip-path="url(#slice-bottom)">
+  <g
+    class="glitch-slice"
+    clip-path="url(#slice-bottom)"
+  >
     <g class="offset-c">
       <text class="wordmark main" x="360" y="40">
         SIC PARVIS MAGNA
@@ -274,332 +300,33 @@
   </g>
 
   <g class="noise">
-    <rect x="132" y="26" width="78" height="2" fill="#00d9ff"/>
-    <rect x="488" y="35" width="105" height="2" fill="#ff2f92"/>
-    <rect x="236" y="52" width="61" height="2" fill="#e6f4f7"/>
-    <rect x="401" y="47" width="86" height="2" fill="#00d9ff"/>
-  </g>
-</svg>
-  <style>
-    .background {
-      fill: #070a10;
-    }
-
-    .frame {
-      fill: none;
-      stroke: #17303a;
-      stroke-width: 1;
-    }
-
-    .label {
-      fill: #49727b;
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
-
-    .wordmark {
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-      font-size: 62px;
-      font-weight: 700;
-      letter-spacing: 8px;
-      text-anchor: middle;
-      dominant-baseline: middle;
-    }
-
-    .main {
-      fill: #e4f3f6;
-      filter: url(#cyan-glow);
-    }
-
-    .cyan {
-      fill: #00d9ff;
-      opacity: 0;
-      animation: glitch-cyan 5.4s steps(1, end) infinite;
-    }
-
-    .magenta {
-      fill: #ff2f92;
-      opacity: 0;
-      animation: glitch-magenta 5.4s steps(1, end) infinite;
-    }
-
-    .glitch-slice {
-      opacity: 0;
-      animation: slice-visibility 5.4s steps(1, end) infinite;
-    }
-
-    .offset-a {
-      animation: slice-a 5.4s steps(1, end) infinite;
-    }
-
-    .offset-b {
-      animation: slice-b 5.4s steps(1, end) infinite;
-    }
-
-    .offset-c {
-      animation: slice-c 5.4s steps(1, end) infinite;
-    }
-
-    .noise {
-      opacity: 0;
-      animation: noise 5.4s steps(1, end) infinite;
-    }
-
-    .status-stable {
-      animation: stable-status 5.4s steps(1, end) infinite;
-    }
-
-    .status-corrupt {
-      opacity: 0;
-      fill: #ff2f92;
-      animation: corrupt-status 5.4s steps(1, end) infinite;
-    }
-
-    @keyframes glitch-cyan {
-      0%, 72%, 77%, 100% {
-        opacity: 0;
-        transform: translateX(0);
-      }
-
-      73% {
-        opacity: 0.70;
-        transform: translateX(-8px);
-      }
-
-      74% {
-        opacity: 0.40;
-        transform: translateX(5px);
-      }
-
-      75% {
-        opacity: 0.75;
-        transform: translateX(-3px);
-      }
-
-      76% {
-        opacity: 0.25;
-        transform: translateX(7px);
-      }
-    }
-
-    @keyframes glitch-magenta {
-      0%, 72%, 77%, 100% {
-        opacity: 0;
-        transform: translateX(0);
-      }
-
-      73% {
-        opacity: 0.55;
-        transform: translateX(8px);
-      }
-
-      74% {
-        opacity: 0.75;
-        transform: translateX(-5px);
-      }
-
-      75% {
-        opacity: 0.45;
-        transform: translateX(4px);
-      }
-
-      76% {
-        opacity: 0.65;
-        transform: translateX(-7px);
-      }
-    }
-
-    @keyframes slice-visibility {
-      0%, 72%, 77%, 100% {
-        opacity: 0;
-      }
-
-      73%, 76% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slice-a {
-      0%, 72%, 77%, 100% {
-        transform: translateX(0);
-      }
-
-      73% {
-        transform: translateX(18px);
-      }
-
-      74% {
-        transform: translateX(-10px);
-      }
-
-      75% {
-        transform: translateX(7px);
-      }
-
-      76% {
-        transform: translateX(-16px);
-      }
-    }
-
-    @keyframes slice-b {
-      0%, 72%, 77%, 100% {
-        transform: translateX(0);
-      }
-
-      73% {
-        transform: translateX(-13px);
-      }
-
-      74% {
-        transform: translateX(16px);
-      }
-
-      75% {
-        transform: translateX(-5px);
-      }
-
-      76% {
-        transform: translateX(11px);
-      }
-    }
-
-    @keyframes slice-c {
-      0%, 72%, 77%, 100% {
-        transform: translateX(0);
-      }
-
-      73% {
-        transform: translateX(9px);
-      }
-
-      74% {
-        transform: translateX(-18px);
-      }
-
-      75% {
-        transform: translateX(14px);
-      }
-
-      76% {
-        transform: translateX(-7px);
-      }
-    }
-
-    @keyframes noise {
-      0%, 72%, 77%, 100% {
-        opacity: 0;
-      }
-
-      73% {
-        opacity: 0.85;
-      }
-
-      74% {
-        opacity: 0.35;
-      }
-
-      75% {
-        opacity: 1;
-      }
-
-      76% {
-        opacity: 0.55;
-      }
-    }
-
-    @keyframes stable-status {
-      0%, 72%, 77%, 100% {
-        opacity: 1;
-      }
-
-      73%, 76% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes corrupt-status {
-      0%, 72%, 77%, 100% {
-        opacity: 0;
-      }
-
-      73%, 76% {
-        opacity: 1;
-      }
-    }
-  </style>
-
-  <rect class="background" width="960" height="180" rx="8"/>
-
-  <path class="frame" d="M35 28 H925"/>
-  <path class="frame" d="M35 152 H925"/>
-
-  <text class="label" x="43" y="20">
-    MOTTO // 01
-  </text>
-
-  <text
-    class="label status-stable"
-    x="917"
-    y="171"
-    text-anchor="end"
-  >
-    SIGNAL: STABLE
-  </text>
-
-  <text
-    class="label status-corrupt"
-    x="917"
-    y="171"
-    text-anchor="end"
-  >
-    SIGNAL: CORRUPT
-  </text>
-
-  <!-- Complete wordmark: always visible -->
-  <text class="wordmark main" x="480" y="91">
-    SIC PARVIS MAGNA
-  </text>
-
-  <!-- Cyan and magenta channel offsets -->
-  <text class="wordmark cyan" x="480" y="91">
-    SIC PARVIS MAGNA
-  </text>
-
-  <text class="wordmark magenta" x="480" y="91">
-    SIC PARVIS MAGNA
-  </text>
-
-  <!-- Additional displaced fragments, visible only during the glitch -->
-  <g class="glitch-slice" clip-path="url(#slice-top)">
-    <g class="offset-a">
-      <text class="wordmark main" x="480" y="91">
-        SIC PARVIS MAGNA
-      </text>
-    </g>
-  </g>
-
-  <g class="glitch-slice" clip-path="url(#slice-middle)">
-    <g class="offset-b">
-      <text class="wordmark main" x="480" y="91">
-        SIC PARVIS MAGNA
-      </text>
-    </g>
-  </g>
-
-  <g class="glitch-slice" clip-path="url(#slice-bottom)">
-    <g class="offset-c">
-      <text class="wordmark main" x="480" y="91">
-        SIC PARVIS MAGNA
-      </text>
-    </g>
-  </g>
-
-  <g class="noise">
-    <rect x="174" y="68" width="94" height="2" fill="#00d9ff"/>
-    <rect x="633" y="82" width="141" height="3" fill="#ff2f92"/>
-    <rect x="282" y="114" width="72" height="2" fill="#e4f3f6"/>
-    <rect x="515" y="104" width="108" height="2" fill="#00d9ff"/>
-    <rect x="744" y="121" width="57" height="3" fill="#ff2f92"/>
+    <rect
+      x="132"
+      y="26"
+      width="78"
+      height="2"
+      fill="#00d9ff"
+    />
+    <rect
+      x="488"
+      y="35"
+      width="105"
+      height="2"
+      fill="#ff2f92"
+    />
+    <rect
+      x="236"
+      y="52"
+      width="61"
+      height="2"
+      fill="#e6f4f7"
+    />
+    <rect
+      x="401"
+      y="47"
+      width="86"
+      height="2"
+      fill="#00d9ff"
+    />
   </g>
 </svg>
