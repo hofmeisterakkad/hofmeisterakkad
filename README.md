@@ -1,47 +1,172 @@
-<h1 align="center"> Hello World! 👋 </h1>
-<h3 align="center"> Leon | ML Engineer & Data Scientist </h3>
+<div align="center">
 
-## About Me
+<img
+  width="100%"
+  src="https://capsule-render.vercel.app/api?type=waving&height=180&text=Leon%20A.%20Hofmeister-Akkad&fontAlignY=35&desc=Sic%20Parvis%20Magna&descAlignY=58&animation=fadeIn"
+  alt="Leon A. Hofmeister-Akkad — Sic Parvis Magna"
+/>
 
-My name is Leon Alexander Akkad and I am:
-- currently studying <a href="https://www.jku.at/en/degree-programs/types-of-degree-programs/masters-degree-programs/ma-artificial-intelligence/"> Artificial Intelligence</a> at <a href="https://www.jku.at/en"> Johannes Kepler University</a> in Linz 👨‍🎓
-- a Teaching Assistant in AI courses 📃
-- (probably) working on some ML project 🤖
-- taking care of my dogs 🐕
+<a href="https://github.com/hofmeisterakkad">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=700&lines=Artificial+Intelligence+%40+JKU+Linz;Building+thinking+machines%2C+one+seed+at+a+time;Turning+papers+into+code+and+code+into+experiments"
+    alt="Typing introduction"
+  />
+</a>
 
-## Tools & Skills & Interests
+</div>
 
-```py
-class Leon(Human):
+<p align="center">
+  <sub><samp>───[ START OF TRANSMISSION ]───</samp></sub>
+</p>
 
-    def __init__(self):
-        super().__init__()
-        self.code = [Python, Java, C++, HTML5, CSS]
-        self.tools = [PyCharm, IntelliJ, Jupyter Notebook, Mac, Windows, Git, LaTeX, MSOffice]
-        self.skills = [MachineLearning, DataScience, ProjectManagement]
-        self.interests = [AI, Tech, Games, Movies, Anime, Manga, Fitness, Dogs]
-                    
+```console
+leon@hofmeisterakkad:~$ whoami
+
+AI master's student
+researcher-in-training
+neural network mechanic
+serial ablation runner
 ```
 
-## Contact
+## `$ cat ./about.py`
 
-You can contact me using one of the following methods: <br>
-GitHub: <a href=https://github.com/hofmeisterakkad> <img alt="GitHub followers" src="https://img.shields.io/github/followers/hofmeisterakkad?label=Follow&style=social"> </a> <br>
-Email: <a href="mailto:leon.akkad@jku.at"> <img alt="Mail Badge" src="https://img.shields.io/badge/Email-blue?logo=gmail&logoColor=white"> </a> <br>
-Discord: <a href="https://www.discordapp.com/users/531195537450336266"> <img alt="Discord Badge" src="https://img.shields.io/badge/Discord-%237289da?logo=discord&logoColor=white"> </a>
+```python
+from earth import Human
 
 
-<!--
-**LeonAlexanderAkkad/LeonAlexanderAkkad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+class Leon(Human):
+    def __init__(self):
+        super().__init__()
 
-Here are some ideas to get you started:
+        self.location = "Austria"
+        self.university = "Johannes Kepler University Linz"
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        self.working_on = [
+            "efficient AI systems",
+            "recurrent neural networks",
+            "language and reasoning models",
+            "GPU-accelerated experiments",
+        ]
+
+        self.usually_found = [
+            "reading papers",
+            "implementing architectures",
+            "profiling models and GPU workloads",
+            "questioning suspiciously good results",
+        ]
+
+    def research_loop(self):
+        while self.has_compute():
+            idea = self.read()
+            model = self.implement(idea)
+            results = self.benchmark(model)
+
+            if results.look_too_good():
+                self.find_the_bug()
+            else:
+                self.launch_more_seeds()
+```
+
+## `$ ls ./toolbox`
+
+<div align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="38" height="38" alt="Python" title="Python">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" width="38" height="38" alt="PyTorch" title="PyTorch">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="38" height="38" alt="C++" title="C++">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="38" height="38" alt="Java" title="Java">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" width="38" height="38" alt="Linux" title="Linux">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" width="38" height="38" alt="Docker" title="Docker">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="38" height="38" alt="Git" title="Git">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="38" height="38" alt="Visual Studio Code" title="Visual Studio Code">&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="38" height="38" alt="Jupyter" title="Jupyter">
+
+</div>
+
+```text
+languages    Python · C++ · Java
+ml           PyTorch · deep learning · LLMs · recurrent networks
+systems      CUDA · Linux · HPC · distributed training
+workflow     Git · Docker · Jupyter · VS Code · LaTeX
+```
+
+## `$ cat ./status.yaml`
+
+```yaml
+mode: research
+status: running
+
+currently:
+  studying: Artificial Intelligence
+  building: reproducible neural-network experiments
+  learning: why the previous run worked
+
+environment: [Python, PyTorch, CUDA, Linux]
+currently_debugging: "probably an indexing error"
+```
+
+## `$ watch -n 1 ./research-monitor`
+
+```text
+┌──────────────────────┬──────────────────────┬──────────┐
+│ RESEARCH MONITOR     │ LOAD                 │ STATUS   │
+├──────────────────────┼──────────────────────┼──────────┤
+│ papers_to_read       │ ████████████████████ │ ∞        │
+│ experiments_running  │ ████████████░░░░░░░░ │ busy     │
+│ available_vram       │ ███░░░░░░░░░░░░░░░░░ │ low      │
+│ gradients            │ ████████████████████ │ finite   │
+│ reproducibility      │ █████████████░░░░░░░ │ maybe    │
+└──────────────────────┴──────────────────────┴──────────┘
+```
+
+## `$ cat ./principles.txt`
+
+```text
+01. Understand the mechanism.
+02. Reproduce before extending.
+03. Benchmark before claiming.
+04. Run more than one seed.
+05. Never trust an unexplained improvement.
+```
+
+<details>
+<summary><code>$ cat ./side-quests.txt</code></summary>
+
+<br>
+
+When I am not training neural networks, I am probably:
+
+- playing games
+- watching films or anime
+- strength training
+- diving
+- spending time with my dogs
+
+</details>
+
+## `$ cat ./contact.txt`
+
+<p align="center">
+  <a href="https://github.com/hofmeisterakkad"><img src="https://img.shields.io/badge/GitHub-hofmeisterakkad-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>&nbsp;
+  <a href="https://www.linkedin.com/in/hofmeisterakkad"><img src="https://img.shields.io/badge/LinkedIn-hofmeisterakkad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+</p>
+
+<p align="center">
+  <sub><samp>───[ END OF TRANSMISSION ]───</samp></sub>
+</p>
+
+<p align="center">
+  <samp>
+    <strong>Litany of ML</strong><br><br>
+    The loss must decrease.<br>
+    The gradients must flow.<br>
+    The result must reproduce.<br>
+    Else, all checkpoints are lost in time.
+  </samp>
+</p>
+
+<img
+  width="100%"
+  src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer"
+  alt=""
+/>
