@@ -21,10 +21,6 @@
 
 </div>
 
-<p align="center">
-  <sub><samp>───[ START OF TRANSMISSION ]───</samp></sub>
-</p>
-
 ```console
 leon@hofmeisterakkad:~$ whoami
 
@@ -153,21 +149,21 @@ When I am not training neural networks, I am probably:
 ## `$ cat ./contact.txt`
 
 <p align="center">
-  <a href="https://github.com/hofmeisterakkad"><img src="https://img.shields.io/badge/GitHub-hofmeisterakkad-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>&nbsp;
-  <a href="https://www.linkedin.com/in/hofmeisterakkad"><img src="https://img.shields.io/badge/LinkedIn-hofmeisterakkad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://github.com/hofmeisterakkad"><img src="https://img.shields.io/badge/GitHub-hofmeisterakkad-181717?style=for-the-badge" alt="GitHub"></a>&nbsp;
+  <a href="https://www.linkedin.com/in/hofmeisterakkad"><img src="https://img.shields.io/badge/LinkedIn-hofmeisterakkad-0A66C2?style=for-the-badge" alt="LinkedIn"></a>
 </p>
 
 <p align="center">
-  <sub><samp>───[ END OF TRANSMISSION ]───</samp></sub>
+  <sub><samp>───[ LITANY OF ML ]───</samp></sub>
 </p>
 
 <p align="center">
   <samp>
-    <strong>Litany of ML</strong><br><br>
     The loss must decrease.<br>
     The gradients must flow.<br>
     The result must reproduce.<br>
-    Else, all checkpoints are lost in time.
+    <br>
+    <em>Else, all checkpoints are lost in time.</em>
   </samp>
 </p>
 
