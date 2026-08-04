@@ -1,0 +1,267 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="90"
+  viewBox="0 0 1200 90"
+  role="img"
+  aria-labelledby="title description"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <title id="title">End of transmission</title>
+  <desc id="description">
+    Animated signal-decay footer indicating a successful terminal exit.
+  </desc>
+
+  <defs>
+    <linearGradient id="footer-background" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#12101c"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <linearGradient id="pulse-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d9ff" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#00d9ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#f0f6fc" stop-opacity="1"/>
+    </linearGradient>
+
+    <filter id="pulse-glow" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .footer-label {
+      font-family:
+        "JetBrains Mono",
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-anchor: middle;
+      fill: #80949a;
+    }
+
+    .footer-cyan {
+      fill: #00d9ff;
+      opacity: 0;
+      animation: footer-cyan-glitch 9s steps(1, end) infinite;
+    }
+
+    .footer-magenta {
+      fill: #ff2f92;
+      opacity: 0;
+      animation: footer-magenta-glitch 9s steps(1, end) infinite;
+    }
+
+    .signal-pulse {
+      opacity: 0;
+      animation: signal-decay 9s linear infinite;
+    }
+
+    .fragment {
+      opacity: 0;
+      animation: fragment-flicker 9s steps(1, end) infinite;
+    }
+
+    @keyframes signal-decay {
+      0% {
+        opacity: 0;
+        transform: translateX(-160px);
+      }
+
+      4% {
+        opacity: 1;
+      }
+
+      22% {
+        opacity: 0.85;
+        transform: translateX(1220px);
+      }
+
+      26% {
+        opacity: 0;
+        transform: translateX(1320px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(1320px);
+      }
+    }
+
+    @keyframes footer-cyan-glitch {
+      0%, 72%, 77%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+
+      73% {
+        opacity: 0.65;
+        transform: translateX(-5px);
+      }
+
+      74% {
+        opacity: 0.30;
+        transform: translateX(3px);
+      }
+
+      75% {
+        opacity: 0.55;
+        transform: translateX(-2px);
+      }
+
+      76% {
+        opacity: 0.20;
+        transform: translateX(4px);
+      }
+    }
+
+    @keyframes footer-magenta-glitch {
+      0%, 72%, 77%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+
+      73% {
+        opacity: 0.45;
+        transform: translateX(5px);
+      }
+
+      74% {
+        opacity: 0.60;
+        transform: translateX(-3px);
+      }
+
+      75% {
+        opacity: 0.35;
+        transform: translateX(2px);
+      }
+
+      76% {
+        opacity: 0.50;
+        transform: translateX(-4px);
+      }
+    }
+
+    @keyframes fragment-flicker {
+      0%, 72%, 77%, 100% {
+        opacity: 0;
+      }
+
+      73% {
+        opacity: 0.85;
+      }
+
+      74% {
+        opacity: 0.30;
+      }
+
+      75% {
+        opacity: 1;
+      }
+
+      76% {
+        opacity: 0.45;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .footer-cyan,
+      .footer-magenta,
+      .signal-pulse,
+      .fragment {
+        animation: none;
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <rect
+    width="1200"
+    height="90"
+    rx="12"
+    fill="url(#footer-background)"
+  />
+
+  <!-- Quiet angular footer geometry -->
+  <path
+    d="M0 66 L240 52 L470 72 L760 50 L1000 66 L1200 43 V90 H0 Z"
+    fill="#33205c"
+    opacity="0.18"
+  />
+
+  <path
+    d="M730 90 L910 57 L1200 74 V90 Z"
+    fill="#7c5cb3"
+    opacity="0.10"
+  />
+
+  <!-- Baseline -->
+  <path
+    d="M42 28 H1158"
+    stroke="#1b3b46"
+    stroke-width="1"
+  />
+
+  <!-- Moving pulse -->
+  <g class="signal-pulse" filter="url(#pulse-glow)">
+    <rect
+      x="-150"
+      y="26"
+      width="125"
+      height="3"
+      fill="url(#pulse-gradient)"
+    />
+
+    <path
+      d="M-32 28 L-22 28 L-16 17 L-9 38 L-2 22 L5 28 L24 28"
+      fill="none"
+      stroke="#00d9ff"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+
+    <circle
+      cx="27"
+      cy="28"
+      r="2.5"
+      fill="#f0f6fc"
+    />
+  </g>
+
+  <!-- Stable label -->
+  <text class="footer-label" x="600" y="62">
+    END OF TRANSMISSION // EXIT 0
+  </text>
+
+  <!-- Brief RGB split -->
+  <text
+    class="footer-label footer-cyan"
+    x="600"
+    y="62"
+  >
+    END OF TRANSMISSION // EXIT 0
+  </text>
+
+  <text
+    class="footer-label footer-magenta"
+    x="600"
+    y="62"
+  >
+    END OF TRANSMISSION // EXIT 0
+  </text>
+
+  <!-- Brief corruption fragments -->
+  <g class="fragment">
+    <rect x="307" y="54" width="70" height="2" fill="#00d9ff"/>
+    <rect x="769" y="63" width="104" height="2" fill="#ff2f92"/>
+    <rect x="525" y="70" width="62" height="2" fill="#f0f6fc"/>
+  </g>
+</svg>
