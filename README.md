@@ -1,13 +1,13 @@
 <div align="center">
 
 <img
+  src="./assets/profile-header.svg?v=1"
   width="100%"
-  src="https://capsule-render.vercel.app/api?type=waving&height=180&text=Leon%20A.%20Hofmeister-Akkad&fontAlignY=42&animation=fadeIn"
   alt="Leon A. Hofmeister-Akkad"
 />
 
 <img
-  src="./assets/sic-parvis-magna-glitch.svg"
+  src="./assets/sic-parvis-magna-glitch.svg?v=1"
   width="460"
   alt="Sic Parvis Magna"
 />
@@ -168,7 +168,7 @@ When I am not training neural networks, I am probably:
 </p>
 
 <img
+  src="./assets/profile-footer.svg?v=1"
   width="100%"
-  src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer"
-  alt=""
+  alt="End of transmission"
 />
