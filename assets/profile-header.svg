@@ -1,69 +1,211 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="1200"
-  height="220"
-  viewBox="0 0 1200 220"
+  height="250"
+  viewBox="0 0 1200 250"
   role="img"
   aria-labelledby="title description"
-  preserveAspectRatio="xMidYMid meet"
 >
-  <title id="title">Leon A. Hofmeister-Akkad</title>
+  <title id="title">
+    Leon A. Hofmeister-Akkad — Sic Parvis Magna
+  </title>
+
   <desc id="description">
-    Animated cyberpunk identity header.
+    Animated profile header with synchronized glitch effects.
   </desc>
 
   <defs>
-    <linearGradient id="background-gradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="55%" stop-color="#12101c"/>
-      <stop offset="100%" stop-color="#181126"/>
+    <linearGradient
+      id="background"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="1"
+    >
+      <stop
+        offset="0%"
+        stop-color="#0d1117"
+      />
+
+      <stop
+        offset="55%"
+        stop-color="#141020"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#1b112a"
+      />
     </linearGradient>
 
-    <linearGradient id="purple-gradient" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#33205c" stop-opacity="0.15"/>
-      <stop offset="55%" stop-color="#7c5cb3" stop-opacity="0.38"/>
-      <stop offset="100%" stop-color="#33205c" stop-opacity="0.10"/>
+    <linearGradient
+      id="purple-light"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="0"
+    >
+      <stop
+        offset="0%"
+        stop-color="#33205c"
+        stop-opacity="0.12"
+      />
+
+      <stop
+        offset="55%"
+        stop-color="#7c5cb3"
+        stop-opacity="0.34"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#33205c"
+        stop-opacity="0.08"
+      />
     </linearGradient>
 
-    <linearGradient id="scan-gradient" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00d9ff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00d9ff" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#00d9ff" stop-opacity="0"/>
+    <!--
+      Decorative divider line:
+      invisible at both edges and strongest near the centre.
+    -->
+    <linearGradient
+      id="line-fade"
+      gradientUnits="userSpaceOnUse"
+      x1="42"
+      y1="0"
+      x2="1158"
+      y2="0"
+    >
+      <stop
+        offset="0%"
+        stop-color="#00d9ff"
+        stop-opacity="0"
+      />
+
+      <stop
+        offset="10%"
+        stop-color="#00d9ff"
+        stop-opacity="0.18"
+      />
+
+      <stop
+        offset="35%"
+        stop-color="#00d9ff"
+        stop-opacity="0.32"
+      />
+
+      <stop
+        offset="50%"
+        stop-color="#7c5cb3"
+        stop-opacity="0.36"
+      />
+
+      <stop
+        offset="65%"
+        stop-color="#00d9ff"
+        stop-opacity="0.32"
+      />
+
+      <stop
+        offset="90%"
+        stop-color="#00d9ff"
+        stop-opacity="0.18"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#00d9ff"
+        stop-opacity="0"
+      />
     </linearGradient>
 
-    <filter id="cyan-glow" x="-20%" y="-80%" width="140%" height="260%">
+    <linearGradient
+      id="scan-gradient"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="0"
+    >
+      <stop
+        offset="0%"
+        stop-color="#00d9ff"
+        stop-opacity="0"
+      />
+
+      <stop
+        offset="50%"
+        stop-color="#00d9ff"
+        stop-opacity="0.18"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#00d9ff"
+        stop-opacity="0"
+      />
+    </linearGradient>
+
+    <filter
+      id="text-glow"
+      x="-25%"
+      y="-100%"
+      width="150%"
+      height="300%"
+    >
       <feGaussianBlur
         in="SourceGraphic"
         stdDeviation="4"
         result="blur"
       />
+
       <feFlood
         flood-color="#00d9ff"
-        flood-opacity="0.32"
+        flood-opacity="0.28"
         result="color"
       />
+
       <feComposite
         in="color"
         in2="blur"
         operator="in"
         result="glow"
       />
+
       <feMerge>
         <feMergeNode in="glow"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <clipPath id="slice-top">
-      <rect x="0" y="74" width="1200" height="17"/>
-    </clipPath>
+    <!-- Additional displaced fragments during the glitch. -->
+    <clipPath id="glitch-slices">
+      <rect
+        x="0"
+        y="92"
+        width="1200"
+        height="16"
+      />
 
-    <clipPath id="slice-middle">
-      <rect x="0" y="101" width="1200" height="15"/>
-    </clipPath>
+      <rect
+        x="0"
+        y="126"
+        width="1200"
+        height="14"
+      />
 
-    <clipPath id="slice-bottom">
-      <rect x="0" y="128" width="1200" height="17"/>
+      <rect
+        x="0"
+        y="176"
+        width="1200"
+        height="12"
+      />
+
+      <rect
+        x="0"
+        y="198"
+        width="1200"
+        height="11"
+      />
     </clipPath>
   </defs>
 
@@ -73,11 +215,12 @@
         "JetBrains Mono",
         "SFMono-Regular",
         Consolas,
+        "Liberation Mono",
         monospace;
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 2.5px;
-      fill: #63838b;
+      fill: #718b92;
     }
 
     .name {
@@ -85,91 +228,91 @@
         "JetBrains Mono",
         "SFMono-Regular",
         Consolas,
+        "Liberation Mono",
         monospace;
-      font-size: 55px;
+      font-size: 53px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       text-anchor: middle;
       dominant-baseline: middle;
     }
 
-    .name-main {
-      fill: #f0f6fc;
-      filter: url(#cyan-glow);
+    .motto {
+      font-family:
+        "JetBrains Mono",
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      text-anchor: middle;
+      dominant-baseline: middle;
     }
 
-    .name-cyan {
+    .main-text {
+      fill: #f0f6fc;
+      filter: url(#text-glow);
+    }
+
+    /*
+      Name and motto are inside the same animated groups,
+      so their glitches are phase-aligned.
+    */
+    .cyan-channel {
       fill: #00d9ff;
       opacity: 0;
-      animation: cyan-glitch 9s steps(1, end) infinite;
+      animation:
+        cyan-glitch 9s steps(1, end) infinite;
     }
 
-    .name-magenta {
+    .magenta-channel {
       fill: #ff2f92;
       opacity: 0;
-      animation: magenta-glitch 9s steps(1, end) infinite;
+      animation:
+        magenta-glitch 9s steps(1, end) infinite;
     }
 
-    .glitch-slice {
+    .glitch-slices {
       opacity: 0;
-      animation: slice-visibility 9s steps(1, end) infinite;
+      animation:
+        glitch-window 9s steps(1, end) infinite;
     }
 
-    .offset-top {
-      animation: offset-top 9s steps(1, end) infinite;
-    }
-
-    .offset-middle {
-      animation: offset-middle 9s steps(1, end) infinite;
-    }
-
-    .offset-bottom {
-      animation: offset-bottom 9s steps(1, end) infinite;
+    .slice-offset {
+      animation:
+        slice-offset 9s steps(1, end) infinite;
     }
 
     .noise {
       opacity: 0;
-      animation: noise-flicker 9s steps(1, end) infinite;
+      animation:
+        noise-window 9s steps(1, end) infinite;
     }
 
     .scanline {
       opacity: 0;
-      animation: scan-sweep 9s linear infinite;
-    }
-
-    .signal-stable {
-      animation: stable-status 9s steps(1, end) infinite;
-    }
-
-    .signal-corrupt {
-      fill: #ff2f92;
-      opacity: 0;
-      animation: corrupt-status 9s steps(1, end) infinite;
+      animation:
+        scan-sweep 9s linear infinite;
     }
 
     .pulse {
-      animation: pulse-move 9s linear infinite;
+      opacity: 0;
+      animation:
+        pulse-sweep 9s linear infinite;
     }
 
-    @keyframes scan-sweep {
-      0% {
-        opacity: 0;
-        transform: translateX(0);
-      }
+    .status-stable {
+      animation:
+        stable-status 9s steps(1, end) infinite;
+    }
 
-      2% {
-        opacity: 0.60;
-      }
-
-      14% {
-        opacity: 0;
-        transform: translateX(1440px);
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateX(1440px);
-      }
+    .status-corrupt {
+      fill: #ff2f92;
+      opacity: 0;
+      animation:
+        corrupt-status 9s steps(1, end) infinite;
     }
 
     @keyframes cyan-glitch {
@@ -184,17 +327,17 @@
       }
 
       74% {
-        opacity: 0.34;
+        opacity: 0.32;
         transform: translateX(5px);
       }
 
       75% {
-        opacity: 0.68;
+        opacity: 0.66;
         transform: translateX(-4px);
       }
 
       76% {
-        opacity: 0.25;
+        opacity: 0.24;
         transform: translateX(7px);
       }
     }
@@ -221,12 +364,12 @@
       }
 
       76% {
-        opacity: 0.62;
+        opacity: 0.60;
         transform: translateX(-7px);
       }
     }
 
-    @keyframes slice-visibility {
+    @keyframes glitch-window {
       0%, 72%, 77%, 100% {
         opacity: 0;
       }
@@ -236,13 +379,13 @@
       }
     }
 
-    @keyframes offset-top {
+    @keyframes slice-offset {
       0%, 72%, 77%, 100% {
         transform: translateX(0);
       }
 
       73% {
-        transform: translateX(18px);
+        transform: translateX(17px);
       }
 
       74% {
@@ -254,65 +397,21 @@
       }
 
       76% {
-        transform: translateX(-15px);
-      }
-    }
-
-    @keyframes offset-middle {
-      0%, 72%, 77%, 100% {
-        transform: translateX(0);
-      }
-
-      73% {
         transform: translateX(-14px);
       }
-
-      74% {
-        transform: translateX(17px);
-      }
-
-      75% {
-        transform: translateX(-6px);
-      }
-
-      76% {
-        transform: translateX(11px);
-      }
     }
 
-    @keyframes offset-bottom {
-      0%, 72%, 77%, 100% {
-        transform: translateX(0);
-      }
-
-      73% {
-        transform: translateX(10px);
-      }
-
-      74% {
-        transform: translateX(-17px);
-      }
-
-      75% {
-        transform: translateX(13px);
-      }
-
-      76% {
-        transform: translateX(-8px);
-      }
-    }
-
-    @keyframes noise-flicker {
+    @keyframes noise-window {
       0%, 72%, 77%, 100% {
         opacity: 0;
       }
 
       73% {
-        opacity: 0.85;
+        opacity: 0.86;
       }
 
       74% {
-        opacity: 0.35;
+        opacity: 0.28;
       }
 
       75% {
@@ -320,7 +419,54 @@
       }
 
       76% {
+        opacity: 0.44;
+      }
+    }
+
+    @keyframes scan-sweep {
+      0% {
+        opacity: 0;
+        transform: translateX(-220px);
+      }
+
+      2% {
         opacity: 0.50;
+      }
+
+      14% {
+        opacity: 0;
+        transform: translateX(1420px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(1420px);
+      }
+    }
+
+    @keyframes pulse-sweep {
+      0% {
+        opacity: 0;
+        transform: translateX(-120px);
+      }
+
+      3% {
+        opacity: 1;
+      }
+
+      19% {
+        opacity: 0.85;
+        transform: translateX(1260px);
+      }
+
+      23% {
+        opacity: 0;
+        transform: translateX(1320px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(1320px);
       }
     }
 
@@ -344,203 +490,285 @@
       }
     }
 
-    @keyframes pulse-move {
-      0% {
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-
-      4% {
-        opacity: 1;
-      }
-
-      18% {
-        transform: translateX(1240px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(1240px);
-        opacity: 0;
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
-      .name-cyan,
-      .name-magenta,
-      .glitch-slice,
+      .cyan-channel,
+      .magenta-channel,
+      .glitch-slices,
       .noise,
       .scanline,
-      .signal-stable,
-      .signal-corrupt,
-      .pulse {
+      .pulse,
+      .status-corrupt {
         animation: none;
-      }
-
-      .name-cyan,
-      .name-magenta,
-      .glitch-slice,
-      .noise,
-      .signal-corrupt {
         opacity: 0;
       }
 
-      .signal-stable {
+      .status-stable {
+        animation: none;
         opacity: 1;
       }
     }
   </style>
 
+  <!-- Background -->
   <rect
     width="1200"
-    height="220"
+    height="250"
     rx="14"
-    fill="url(#background-gradient)"
+    fill="url(#background)"
   />
 
-  <!-- Angular background geometry -->
+  <!-- Restrained angular geometry -->
   <path
-    d="M0 0 H700 L500 220 H0 Z"
+    d="
+      M0 0
+      H700
+      L500 250
+      H0
+      Z
+    "
     fill="#33205c"
-    opacity="0.20"
+    opacity="0.18"
   />
 
   <path
-    d="M430 0 H1200 V116 L865 220 H690 Z"
-    fill="url(#purple-gradient)"
+    d="
+      M430 0
+      H1200
+      V123
+      L865 250
+      H700
+      Z
+    "
+    fill="url(#purple-light)"
   />
 
   <path
-    d="M0 182 L300 155 L590 190 L910 152 L1200 181 V220 H0 Z"
+    d="
+      M0 205
+      L300 180
+      L590 217
+      L910 176
+      L1200 208
+      V250
+      H0
+      Z
+    "
     fill="#7c5cb3"
-    opacity="0.10"
+    opacity="0.09"
   />
 
-  <!-- Frame lines -->
+  <!--
+    Only one top divider and one bottom divider remain.
+    The former purple line has been removed.
+  -->
   <path
-    d="M42 39 H1158"
-    stroke="#1b3b46"
+    d="M42 43H1158"
+    fill="none"
+    stroke="url(#line-fade)"
     stroke-width="1"
   />
 
   <path
-    d="M42 181 H1158"
-    stroke="#392753"
+    d="M42 226H1158"
+    fill="none"
+    stroke="url(#line-fade)"
     stroke-width="1"
   />
 
-  <!-- Header labels -->
-  <text class="microtext" x="50" y="28">
+  <!-- Labels -->
+  <text
+    class="microtext"
+    x="50"
+    y="31"
+  >
     IDENTITY // 01
   </text>
 
   <text
-    class="microtext signal-stable"
+    class="microtext status-stable"
     x="1150"
-    y="28"
+    y="31"
     text-anchor="end"
   >
     SIGNAL: ACQUIRED
   </text>
 
   <text
-    class="microtext signal-corrupt"
+    class="microtext status-corrupt"
     x="1150"
-    y="28"
+    y="31"
     text-anchor="end"
   >
     SIGNAL: CORRUPT
   </text>
 
-  <!-- Sweeping acquisition scan -->
+  <!-- Subtle scan -->
   <rect
     class="scanline"
     x="-220"
     y="0"
     width="180"
-    height="220"
+    height="250"
     fill="url(#scan-gradient)"
   />
 
-  <!-- Stable name -->
-  <text class="name name-main" x="600" y="111">
-    Leon A. Hofmeister-Akkad
-  </text>
-
-  <!-- RGB channel split during corruption -->
-  <text class="name name-cyan" x="600" y="111">
-    Leon A. Hofmeister-Akkad
-  </text>
-
-  <text class="name name-magenta" x="600" y="111">
-    Leon A. Hofmeister-Akkad
-  </text>
-
-  <!-- Displaced horizontal slices -->
-  <g
-    class="glitch-slice"
-    clip-path="url(#slice-top)"
+  <!-- Stable name and motto -->
+  <text
+    class="name main-text"
+    x="600"
+    y="124"
   >
-    <g class="offset-top">
-      <text class="name name-main" x="600" y="111">
+    Leon A. Hofmeister-Akkad
+  </text>
+
+  <text
+    class="motto main-text"
+    x="600"
+    y="193"
+  >
+    SIC PARVIS MAGNA
+  </text>
+
+  <!-- Synchronized cyan split -->
+  <g class="cyan-channel">
+    <text
+      class="name"
+      x="600"
+      y="124"
+    >
+      Leon A. Hofmeister-Akkad
+    </text>
+
+    <text
+      class="motto"
+      x="600"
+      y="193"
+    >
+      SIC PARVIS MAGNA
+    </text>
+  </g>
+
+  <!-- Synchronized magenta split -->
+  <g class="magenta-channel">
+    <text
+      class="name"
+      x="600"
+      y="124"
+    >
+      Leon A. Hofmeister-Akkad
+    </text>
+
+    <text
+      class="motto"
+      x="600"
+      y="193"
+    >
+      SIC PARVIS MAGNA
+    </text>
+  </g>
+
+  <!-- Synchronized displaced slices -->
+  <g
+    class="glitch-slices"
+    clip-path="url(#glitch-slices)"
+  >
+    <g class="slice-offset">
+      <text
+        class="name main-text"
+        x="600"
+        y="124"
+      >
         Leon A. Hofmeister-Akkad
+      </text>
+
+      <text
+        class="motto main-text"
+        x="600"
+        y="193"
+      >
+        SIC PARVIS MAGNA
       </text>
     </g>
   </g>
 
-  <g
-    class="glitch-slice"
-    clip-path="url(#slice-middle)"
-  >
-    <g class="offset-middle">
-      <text class="name name-main" x="600" y="111">
-        Leon A. Hofmeister-Akkad
-      </text>
-    </g>
-  </g>
-
-  <g
-    class="glitch-slice"
-    clip-path="url(#slice-bottom)"
-  >
-    <g class="offset-bottom">
-      <text class="name name-main" x="600" y="111">
-        Leon A. Hofmeister-Akkad
-      </text>
-    </g>
-  </g>
-
-  <!-- Small glitch fragments -->
+  <!-- Brief corruption fragments -->
   <g class="noise">
-    <rect x="205" y="83" width="118" height="2" fill="#00d9ff"/>
-    <rect x="768" y="98" width="172" height="3" fill="#ff2f92"/>
-    <rect x="374" y="135" width="91" height="2" fill="#f0f6fc"/>
-    <rect x="635" y="126" width="133" height="2" fill="#00d9ff"/>
-    <rect x="912" y="144" width="78" height="3" fill="#ff2f92"/>
+    <rect
+      x="175"
+      y="95"
+      width="104"
+      height="2"
+      fill="#00d9ff"
+    />
+
+    <rect
+      x="760"
+      y="116"
+      width="151"
+      height="3"
+      fill="#ff2f92"
+    />
+
+    <rect
+      x="338"
+      y="148"
+      width="76"
+      height="2"
+      fill="#f0f6fc"
+    />
+
+    <rect
+      x="642"
+      y="137"
+      width="129"
+      height="2"
+      fill="#00d9ff"
+    />
+
+    <rect
+      x="470"
+      y="201"
+      width="89"
+      height="2"
+      fill="#ff2f92"
+    />
+
+    <rect
+      x="707"
+      y="187"
+      width="94"
+      height="2"
+      fill="#00d9ff"
+    />
   </g>
 
-  <!-- Bottom signal trace -->
-  <path
-    d="M50 197 H1150"
-    stroke="#183641"
-    stroke-width="1"
-  />
-
+  <!-- Small moving pulse on the bottom divider -->
   <g class="pulse">
     <rect
-      x="-80"
-      y="195"
-      width="74"
+      x="-90"
+      y="224.5"
+      width="72"
       height="3"
       fill="#00d9ff"
-      opacity="0.85"
+      opacity="0.78"
     />
+
     <rect
-      x="-22"
-      y="194"
+      x="-23"
+      y="222"
       width="6"
-      height="5"
+      height="8"
       fill="#f0f6fc"
+      opacity="0.75"
+    />
+
+    <rect
+      x="-17"
+      y="224.5"
+      width="12"
+      height="3"
+      fill="#7c5cb3"
+      opacity="0.78"
     />
   </g>
 </svg>
