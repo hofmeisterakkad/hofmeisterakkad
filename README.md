@@ -26,7 +26,7 @@ class Leon(Human):
 ## Contact
 
 You can contact me using one of the following methods: <br>
-GitHub: <a href=https://github.com/LeonAlexanderAkkad> <img alt="GitHub followers" src="https://img.shields.io/github/followers/LeonAlexanderAkkad?label=Follow&style=social"> </a> <br>
+GitHub: <a href=https://github.com/hofmeisterakkad> <img alt="GitHub followers" src="https://img.shields.io/github/followers/LeonAlexanderAkkad?label=Follow&style=social"> </a> <br>
 Email: <a href="mailto:leon.akkad@jku.at"> <img alt="Mail Badge" src="https://img.shields.io/badge/Email-blue?logo=gmail&logoColor=white"> </a> <br>
 Discord: <a href="https://www.discordapp.com/users/531195537450336266"> <img alt="Discord Badge" src="https://img.shields.io/badge/Discord-%237289da?logo=discord&logoColor=white"> </a>
 
