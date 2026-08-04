@@ -2,16 +2,22 @@
 
 <img
   width="100%"
-  src="https://capsule-render.vercel.app/api?type=waving&height=180&text=Leon%20A.%20Hofmeister-Akkad&fontAlignY=35&desc=Sic%20Parvis%20Magna&descAlignY=58&animation=fadeIn"
-  alt="Leon A. Hofmeister-Akkad — Sic Parvis Magna"
+  src="https://capsule-render.vercel.app/api?type=waving&height=180&text=Leon%20A.%20Hofmeister-Akkad&fontAlignY=42&animation=fadeIn"
+  alt="Leon A. Hofmeister-Akkad"
 />
 
-<a href="https://github.com/hofmeisterakkad">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=700&lines=Artificial+Intelligence+%40+JKU+Linz;Building+thinking+machines%2C+one+seed+at+a+time;Turning+papers+into+code+and+code+into+experiments"
-    alt="Typing introduction"
-  />
-</a>
+<img
+  src="./assets/sic-parvis-magna-glitch.svg"
+  width="460"
+  alt="Sic Parvis Magna"
+/>
+
+<br>
+
+<a href="https://github.com/hofmeisterakkad"><img
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=700&lines=Artificial+Intelligence+%40+JKU+Linz;Building+thinking+machines%2C+one+seed+at+a+time;Turning+papers+into+code+and+code+into+experiments"
+  alt="Typing introduction"
+/></a>
 
 </div>
 
